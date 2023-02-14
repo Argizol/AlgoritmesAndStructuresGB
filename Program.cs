@@ -1,4 +1,6 @@
-﻿int[] arr = new int[100];
+﻿using Lesson1;
+
+int[] arr = new int[100];
 //заполняем массив случайными числами
 Random rd = new Random();
 for (int i = 0; i < arr.Length; ++i)
@@ -14,7 +16,7 @@ foreach (int x in arr)
 }
 
 //сортировка
-Algoritmes.Lesson2.PyramidSort(arr, arr.Length);
+Lesson2.PyramidSort(arr, arr.Length);
 
 Console.WriteLine("\n\nThe array after sorting:");
 

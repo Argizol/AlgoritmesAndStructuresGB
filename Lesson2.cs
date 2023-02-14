@@ -1,4 +1,4 @@
-﻿namespace Algoritmes
+﻿namespace Lesson1
 {
     internal class Lesson2
     {
@@ -6,7 +6,7 @@
         {
             int imax;
             int buf;
-            if ((2 * i + 2) < N)
+            if (2 * i + 2 < N)
             {
                 if (arr[2 * i + 1] < arr[2 * i + 2]) imax = 2 * i + 2;
                 else imax = 2 * i + 1;
