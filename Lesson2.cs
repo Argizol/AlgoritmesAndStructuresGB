@@ -2,7 +2,7 @@
 {
     internal class Lesson2
     {
-        static int add2pyramid(int[] arr, int i, int N)
+        static int BuildPyramid(int[] arr, int i, int N)
         {
             int imax;
             int buf;
@@ -25,15 +25,15 @@
 
         public static void PyramidSort(int[] arr, int len)
         {
-            //step 1: building the pyramid
+            //делаем пирамиду значений из массива
             for (int i = len / 2 - 1; i >= 0; --i)
             {
                 long prev_i = i;
-                i = add2pyramid(arr, i, len);
+                i = BuildPyramid(arr, i, len);
                 if (prev_i != i) ++i;
             }
 
-            //step 2: sorting
+            //сортируем
             int buf;
             for (int k = len - 1; k > 0; --k)
             {
@@ -44,7 +44,7 @@
                 while (i != prev_i)
                 {
                     prev_i = i;
-                    i = add2pyramid(arr, i, k);
+                    i = BuildPyramid(arr, i, k);
                 }
             }
         }
