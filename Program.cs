@@ -1,28 +1,17 @@
 ﻿using Lesson1;
 
-int[] arr = new int[100];
-//заполняем массив случайными числами
-Random rd = new Random();
-for (int i = 0; i < arr.Length; ++i)
-{
-    arr[i] = rd.Next(1, 101);
-}
+var linklist = new MyLinkedList<int>();
+linklist.Add(1);
+linklist.Add(2);
+linklist.Add(3);
+linklist.Add(4);
+linklist.Add(5);
+foreach (int link in linklist) Console.WriteLine(link);
 
-Console.WriteLine("The array before sorting:");
+Console.WriteLine();
 
-foreach (int x in arr)
-{
-    System.Console.Write($"{x} +  ");
-}
+linklist.Reverse();
 
-//сортировка
-Lesson2.PyramidSort(arr, arr.Length);
+foreach (int link in linklist) Console.WriteLine(link);
 
-Console.WriteLine("\n\nThe array after sorting:");
-
-foreach (int x in arr)
-{
-    Console.Write($"{x} +  ");
-}
-Console.WriteLine("\n\nPress any key to end programm");
-Console.ReadKey(true);
+Console.ReadLine();
